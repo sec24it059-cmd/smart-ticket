@@ -1,0 +1,2513 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "email": "admin@ticketnest.io",
+      "passwordHash": "$2b$10$BnA0J7mMwC6wIHI1L58Q6uinxFtq.XWdbKI6RL17oJC6hr6ff0fN2",
+      "name": "Elena Rostova",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "usr_org_1",
+      "email": "organizer@pulsefest.io",
+      "passwordHash": "$2b$10$BnA0J7mMwC6wIHI1L58Q6uUdCePa2isYhWFaQsIHkq.uOXUJJKWWm",
+      "name": "Vikram Seth",
+      "role": "ORGANIZER",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "usr_org_2",
+      "email": "organizer@summit.org",
+      "passwordHash": "$2b$10$BnA0J7mMwC6wIHI1L58Q6uUdCePa2isYhWFaQsIHkq.uOXUJJKWWm",
+      "name": "Maya Lin",
+      "role": "ORGANIZER",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "usr_att_1",
+      "email": "attendee@example.com",
+      "passwordHash": "$2b$10$BnA0J7mMwC6wIHI1L58Q6u3LCK1H.goU3ESy/d3qU7yxWgcSZfnme",
+      "name": "Aarav Patel",
+      "role": "ATTENDEE",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_pulse_1",
+      "name": "PulseLive Entertainment & Media",
+      "slug": "pulselive",
+      "description": "Premier curator of music festivals, tech symposiums, and cultural gatherings across Asia.",
+      "logoUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80",
+      "verified": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "org_summit_2",
+      "name": "Apex Horizon Global Summits",
+      "slug": "apex-horizon",
+      "description": "Leading global conference organizers focusing on Cloud Architecture, AI Innovation, and Founder ecosystems.",
+      "logoUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&auto=format&fit=crop&q=80",
+      "verified": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    }
+  ],
+  "organizationMembers": [
+    {
+      "id": "mem_1",
+      "organizationId": "org_pulse_1",
+      "userId": "usr_org_1",
+      "role": "OWNER",
+      "createdAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "mem_2",
+      "organizationId": "org_summit_2",
+      "userId": "usr_org_2",
+      "role": "OWNER",
+      "createdAt": "2026-10-13T14:51:31.593Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_tech_conf_1",
+      "organizationId": "org_pulse_1",
+      "title": "DevPulse India Tech & Cloud Summit 2026",
+      "slug": "devpulse-india-2026",
+      "description": "The premier multi-track engineering conference bringing together 2,500+ software architects, devops leaders, and AI practitioners. Featuring 40 keynote sessions, deep-dive workshops, and executive networking sessions.",
+      "coverImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop&q=80",
+      "category": "Technology",
+      "venueName": "Bengaluru International Exhibition Centre (BIEC)",
+      "venueAddress": "10th Mile, Tumkur Main Road, Madavara",
+      "city": "Bengaluru",
+      "startDate": "2026-11-11T14:51:31.593Z",
+      "endDate": "2026-11-13T14:51:31.593Z",
+      "bookingOpensAt": "2026-10-13T14:51:31.593Z",
+      "salesClosesAt": "2026-11-10T14:51:31.593Z",
+      "maxCapacity": 700,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "evt_neon_music_2",
+      "organizationId": "org_pulse_1",
+      "title": "Neon Oasis Electric Music Festival",
+      "slug": "neon-oasis-festival",
+      "description": "Two nights of hypnotic visual soundscapes, world-class EDM producers, ambient synth waves, and immersive LED art installations under open skies.",
+      "coverImage": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&auto=format&fit=crop&q=80",
+      "category": "Music",
+      "venueName": "Mahalaxmi Racecourse Open Grounds",
+      "venueAddress": "Dr E Moses Marg, Royal Western India Turf Club",
+      "city": "Mumbai",
+      "startDate": "2026-11-26T14:51:31.593Z",
+      "endDate": "2026-11-27T14:51:31.593Z",
+      "bookingOpensAt": "2026-10-13T14:51:31.593Z",
+      "salesClosesAt": "2026-11-26T02:51:31.593Z",
+      "maxCapacity": 1200,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "evt_design_expo_3",
+      "organizationId": "org_summit_2",
+      "title": "Design Masters: Global Product & Spatial Design Forum",
+      "slug": "design-masters-forum",
+      "description": "An interactive gathering of product designers, UX researchers, and creative technologists exploring AI-assisted design systems, physical computing, and sustainable ergonomics.",
+      "coverImage": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80",
+      "category": "Design",
+      "venueName": "India Habitat Centre, Lodhi Road",
+      "venueAddress": "Lodhi Rd, Near Airforce Bal Bharati School",
+      "city": "New Delhi",
+      "startDate": "2026-12-11T14:51:31.593Z",
+      "endDate": "2026-12-12T14:51:31.593Z",
+      "bookingOpensAt": "2026-10-13T14:51:31.593Z",
+      "salesClosesAt": "2026-12-11T08:51:31.593Z",
+      "maxCapacity": 500,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "evt_culinary_gourmet_4",
+      "organizationId": "org_pulse_1",
+      "title": "Artisanal Flavors & Gastronomy Expo 2026",
+      "slug": "artisanal-flavors-expo",
+      "description": "A sensory celebration showcasing Michelin-starred masterclasses, specialty coffee roasters, craft bakeries, and organic wineries.",
+      "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&auto=format&fit=crop&q=80",
+      "category": "Food & Drink",
+      "venueName": "Jayamahal Palace Convention Grounds",
+      "venueAddress": "1, Jayamahal Main Rd, Near Cantonment Railway Station",
+      "city": "Bengaluru",
+      "startDate": "2026-11-16T14:51:31.593Z",
+      "endDate": "2026-11-18T14:51:31.593Z",
+      "bookingOpensAt": "2026-10-13T14:51:31.593Z",
+      "salesClosesAt": "2026-11-15T14:51:31.593Z",
+      "maxCapacity": 600,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "evt_concurrency_test",
+      "organizationId": "org_pulse_1",
+      "title": "Concurrency Benchmark Event",
+      "slug": "concurrency-benchmark",
+      "description": "Testing race conditions and inventory locks",
+      "coverImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      "category": "Technology",
+      "venueName": "Test Hall",
+      "venueAddress": "123 Cloud Rd",
+      "city": "Bengaluru",
+      "startDate": "2026-10-28T14:52:02.806Z",
+      "endDate": "2026-10-29T14:52:02.806Z",
+      "bookingOpensAt": "2026-10-27T13:52:02.806Z",
+      "salesClosesAt": "2026-10-28T14:52:02.806Z",
+      "maxCapacity": 10,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-27T14:52:02.806Z",
+      "updatedAt": "2026-10-27T14:52:02.806Z"
+    },
+    {
+      "id": "evt_conc_test",
+      "organizationId": "org_pulse_1",
+      "title": "Concurrent Test Event",
+      "slug": "concurrent-test-evt",
+      "description": "Testing concurrency",
+      "coverImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      "category": "Technology",
+      "venueName": "Arena A",
+      "venueAddress": "Outer Ring",
+      "city": "Bengaluru",
+      "startDate": "2026-10-28T14:54:28.481Z",
+      "endDate": "2026-10-29T14:54:28.481Z",
+      "bookingOpensAt": "2026-10-27T13:54:28.481Z",
+      "salesClosesAt": "2026-10-28T14:54:28.481Z",
+      "maxCapacity": 10,
+      "status": "PUBLISHED",
+      "createdAt": "2026-10-27T14:54:28.481Z",
+      "updatedAt": "2026-10-27T14:54:28.481Z"
+    }
+  ],
+  "ticketCategories": [
+    {
+      "id": "tkt_dev_plat",
+      "eventId": "evt_tech_conf_1",
+      "name": "Platinum Pass",
+      "description": "VIP Front-Row Keynote Seating, Speaker Lounge Access, Private Networking Dinner & Swag Bag",
+      "price": 3000,
+      "totalQuantity": 50,
+      "reservedQuantity": 0,
+      "soldQuantity": 18,
+      "maxPerUser": 4,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_dev_gold",
+      "eventId": "evt_tech_conf_1",
+      "name": "Gold Pass",
+      "description": "Access to All Track Sessions, Catered Buffet Lunch, Workshop Access & Certificate",
+      "price": 1500,
+      "totalQuantity": 150,
+      "reservedQuantity": 0,
+      "soldQuantity": 64,
+      "maxPerUser": 6,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_dev_std",
+      "eventId": "evt_tech_conf_1",
+      "name": "Standard Pass",
+      "description": "General Conference Hall Admission, Exhibition Booth Access & Digital Session Recordings",
+      "price": 600,
+      "totalQuantity": 500,
+      "reservedQuantity": 1,
+      "soldQuantity": 211,
+      "maxPerUser": 10,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_neon_vip",
+      "eventId": "evt_neon_music_2",
+      "name": "VIP Deck & Backstage Pass",
+      "description": "Elevated Viewing Platform, Express Fast-Track Entry, Complimentary Bar & Artist Meet",
+      "price": 4500,
+      "totalQuantity": 100,
+      "reservedQuantity": 0,
+      "soldQuantity": 32,
+      "maxPerUser": 4,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_neon_ga",
+      "eventId": "evt_neon_music_2",
+      "name": "General Admission Weekend Pass",
+      "description": "Full 2-Day Festival Grounds Access, Food Village & Glow Zone Entry",
+      "price": 1800,
+      "totalQuantity": 800,
+      "reservedQuantity": 0,
+      "soldQuantity": 340,
+      "maxPerUser": 8,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_dsn_plat",
+      "eventId": "evt_design_expo_3",
+      "name": "Executive Masterclass Pass",
+      "description": "All 3 Hands-on Design Workshops, Portfolio Review by Design Directors, Cocktail Reception",
+      "price": 3200,
+      "totalQuantity": 60,
+      "reservedQuantity": 0,
+      "soldQuantity": 24,
+      "maxPerUser": 2,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_dsn_std",
+      "eventId": "evt_design_expo_3",
+      "name": "Standard Design Delegate",
+      "description": "Keynotes, Panel Discussions, Expo Showcase & Networking App Access",
+      "price": 1200,
+      "totalQuantity": 300,
+      "reservedQuantity": 0,
+      "soldQuantity": 110,
+      "maxPerUser": 5,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_cul_chef",
+      "eventId": "evt_culinary_gourmet_4",
+      "name": "Chef Table Tasting Experience",
+      "description": "7-Course Curated Tasting Menu with Master Sommelier Wine Pairings",
+      "price": 3500,
+      "totalQuantity": 40,
+      "reservedQuantity": 0,
+      "soldQuantity": 15,
+      "maxPerUser": 2,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_cul_gen",
+      "eventId": "evt_culinary_gourmet_4",
+      "name": "Gourmet Explorer Day Pass",
+      "description": "Access to 60+ Artisan Food Stalls, Live Cooking Stages & Tasting Tokens",
+      "price": 750,
+      "totalQuantity": 500,
+      "reservedQuantity": 0,
+      "soldQuantity": 180,
+      "maxPerUser": 6,
+      "isActive": true,
+      "createdAt": "2026-10-13T14:51:31.593Z",
+      "updatedAt": "2026-10-13T14:51:31.593Z"
+    },
+    {
+      "id": "tkt_concurrency_test_10",
+      "eventId": "evt_concurrency_test",
+      "name": "Strict 10 Inventory Pass",
+      "price": 100,
+      "totalQuantity": 10,
+      "reservedQuantity": 0,
+      "soldQuantity": 0,
+      "maxPerUser": 1,
+      "isActive": true,
+      "createdAt": "2026-10-27T14:52:02.806Z",
+      "updatedAt": "2026-10-27T14:52:02.806Z"
+    },
+    {
+      "id": "tkt_conc_test_10",
+      "eventId": "evt_conc_test",
+      "name": "Strict 10 Pass",
+      "price": 100,
+      "totalQuantity": 10,
+      "reservedQuantity": 0,
+      "soldQuantity": 0,
+      "maxPerUser": 1,
+      "isActive": true,
+      "createdAt": "2026-10-27T14:54:28.481Z",
+      "updatedAt": "2026-10-27T14:54:28.481Z"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res_sample_101",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-94812",
+      "status": "CONFIRMED",
+      "expiresAt": "2026-10-25T14:51:31.593Z",
+      "totalAmount": 3000,
+      "createdAt": "2026-10-25T14:51:31.593Z",
+      "updatedAt": "2026-10-25T14:51:31.593Z",
+      "items": [
+        {
+          "id": "res_item_1",
+          "reservationId": "res_sample_101",
+          "ticketCategoryId": "tkt_dev_plat",
+          "categoryName": "Platinum Pass",
+          "quantity": 1,
+          "unitPrice": 3000,
+          "subtotal": 3000
+        }
+      ]
+    },
+    {
+      "id": "res_concurrent_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_1",
+      "reservationNumber": "RES-CONC-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.598Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_1",
+          "reservationId": "res_concurrent_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.598Z",
+      "updatedAt": "2026-10-27T14:51:31.598Z"
+    },
+    {
+      "id": "res_concurrent_2",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_2",
+      "reservationNumber": "RES-CONC-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.598Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_2",
+          "reservationId": "res_concurrent_2",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.598Z",
+      "updatedAt": "2026-10-27T14:51:31.598Z"
+    },
+    {
+      "id": "res_concurrent_3",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_3",
+      "reservationNumber": "RES-CONC-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.598Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_3",
+          "reservationId": "res_concurrent_3",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.598Z",
+      "updatedAt": "2026-10-27T14:51:31.598Z"
+    },
+    {
+      "id": "res_concurrent_4",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_4",
+      "reservationNumber": "RES-CONC-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.598Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_4",
+          "reservationId": "res_concurrent_4",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.598Z",
+      "updatedAt": "2026-10-27T14:51:31.598Z"
+    },
+    {
+      "id": "res_concurrent_5",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_5",
+      "reservationNumber": "RES-CONC-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.598Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_5",
+          "reservationId": "res_concurrent_5",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.598Z",
+      "updatedAt": "2026-10-27T14:51:31.598Z"
+    },
+    {
+      "id": "res_concurrent_6",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_6",
+      "reservationNumber": "RES-CONC-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.599Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_6",
+          "reservationId": "res_concurrent_6",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.599Z",
+      "updatedAt": "2026-10-27T14:51:31.599Z"
+    },
+    {
+      "id": "res_concurrent_7",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_7",
+      "reservationNumber": "RES-CONC-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.599Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_7",
+          "reservationId": "res_concurrent_7",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.599Z",
+      "updatedAt": "2026-10-27T14:51:31.599Z"
+    },
+    {
+      "id": "res_concurrent_8",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_8",
+      "reservationNumber": "RES-CONC-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.599Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_8",
+          "reservationId": "res_concurrent_8",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.599Z",
+      "updatedAt": "2026-10-27T14:51:31.599Z"
+    },
+    {
+      "id": "res_concurrent_9",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_9",
+      "reservationNumber": "RES-CONC-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.599Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_9",
+          "reservationId": "res_concurrent_9",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.599Z",
+      "updatedAt": "2026-10-27T14:51:31.599Z"
+    },
+    {
+      "id": "res_concurrent_10",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_10",
+      "reservationNumber": "RES-CONC-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.599Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_10",
+          "reservationId": "res_concurrent_10",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.599Z",
+      "updatedAt": "2026-10-27T14:51:31.599Z"
+    },
+    {
+      "id": "res_test_expired_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-001",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:51:26.600Z",
+      "totalAmount": 500,
+      "items": [
+        {
+          "id": "item_exp_1",
+          "reservationId": "res_test_expired_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 5,
+          "unitPrice": 100,
+          "subtotal": 500
+        }
+      ],
+      "createdAt": "2026-10-27T14:41:26.600Z",
+      "updatedAt": "2026-10-27T14:51:31.601Z"
+    },
+    {
+      "id": "res_fail_test_1793112691602",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-TEST",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:31.602Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1",
+          "reservationId": "res_fail_test_1793112691602",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:31.602Z",
+      "updatedAt": "2026-10-27T14:51:31.602Z"
+    },
+    {
+      "id": "res_concurrent_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_1",
+      "reservationNumber": "RES-CONC-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.540Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_1",
+          "reservationId": "res_concurrent_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.540Z",
+      "updatedAt": "2026-10-27T14:51:43.540Z"
+    },
+    {
+      "id": "res_concurrent_2",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_2",
+      "reservationNumber": "RES-CONC-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.541Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_2",
+          "reservationId": "res_concurrent_2",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.541Z",
+      "updatedAt": "2026-10-27T14:51:43.541Z"
+    },
+    {
+      "id": "res_concurrent_3",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_3",
+      "reservationNumber": "RES-CONC-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.541Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_3",
+          "reservationId": "res_concurrent_3",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.541Z",
+      "updatedAt": "2026-10-27T14:51:43.541Z"
+    },
+    {
+      "id": "res_concurrent_4",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_4",
+      "reservationNumber": "RES-CONC-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.541Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_4",
+          "reservationId": "res_concurrent_4",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.541Z",
+      "updatedAt": "2026-10-27T14:51:43.541Z"
+    },
+    {
+      "id": "res_concurrent_5",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_5",
+      "reservationNumber": "RES-CONC-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.542Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_5",
+          "reservationId": "res_concurrent_5",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.542Z",
+      "updatedAt": "2026-10-27T14:51:43.542Z"
+    },
+    {
+      "id": "res_concurrent_6",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_6",
+      "reservationNumber": "RES-CONC-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.542Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_6",
+          "reservationId": "res_concurrent_6",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.542Z",
+      "updatedAt": "2026-10-27T14:51:43.542Z"
+    },
+    {
+      "id": "res_concurrent_7",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_7",
+      "reservationNumber": "RES-CONC-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.542Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_7",
+          "reservationId": "res_concurrent_7",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.542Z",
+      "updatedAt": "2026-10-27T14:51:43.542Z"
+    },
+    {
+      "id": "res_concurrent_8",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_8",
+      "reservationNumber": "RES-CONC-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.542Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_8",
+          "reservationId": "res_concurrent_8",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.542Z",
+      "updatedAt": "2026-10-27T14:51:43.542Z"
+    },
+    {
+      "id": "res_concurrent_9",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_9",
+      "reservationNumber": "RES-CONC-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.543Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_9",
+          "reservationId": "res_concurrent_9",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.543Z",
+      "updatedAt": "2026-10-27T14:51:43.543Z"
+    },
+    {
+      "id": "res_concurrent_10",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_10",
+      "reservationNumber": "RES-CONC-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.543Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_10",
+          "reservationId": "res_concurrent_10",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.543Z",
+      "updatedAt": "2026-10-27T14:51:43.543Z"
+    },
+    {
+      "id": "res_test_expired_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-001",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:51:38.544Z",
+      "totalAmount": 500,
+      "items": [
+        {
+          "id": "item_exp_1",
+          "reservationId": "res_test_expired_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 5,
+          "unitPrice": 100,
+          "subtotal": 500
+        }
+      ],
+      "createdAt": "2026-10-27T14:41:38.544Z",
+      "updatedAt": "2026-10-27T14:51:43.545Z"
+    },
+    {
+      "id": "res_fail_test_1793112703546",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-TEST",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:01:43.546Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1",
+          "reservationId": "res_fail_test_1793112703546",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:51:43.546Z",
+      "updatedAt": "2026-10-27T14:51:43.546Z"
+    },
+    {
+      "id": "res_concurrent_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_1",
+      "reservationNumber": "RES-CONC-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.807Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_1",
+          "reservationId": "res_concurrent_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.807Z",
+      "updatedAt": "2026-10-27T14:52:02.807Z"
+    },
+    {
+      "id": "res_concurrent_2",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_2",
+      "reservationNumber": "RES-CONC-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.807Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_2",
+          "reservationId": "res_concurrent_2",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.807Z",
+      "updatedAt": "2026-10-27T14:52:02.807Z"
+    },
+    {
+      "id": "res_concurrent_3",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_3",
+      "reservationNumber": "RES-CONC-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.807Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_3",
+          "reservationId": "res_concurrent_3",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.807Z",
+      "updatedAt": "2026-10-27T14:52:02.807Z"
+    },
+    {
+      "id": "res_concurrent_4",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_4",
+      "reservationNumber": "RES-CONC-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.808Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_4",
+          "reservationId": "res_concurrent_4",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.808Z",
+      "updatedAt": "2026-10-27T14:52:02.808Z"
+    },
+    {
+      "id": "res_concurrent_5",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_5",
+      "reservationNumber": "RES-CONC-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.808Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_5",
+          "reservationId": "res_concurrent_5",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.808Z",
+      "updatedAt": "2026-10-27T14:52:02.808Z"
+    },
+    {
+      "id": "res_concurrent_6",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_6",
+      "reservationNumber": "RES-CONC-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.808Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_6",
+          "reservationId": "res_concurrent_6",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.808Z",
+      "updatedAt": "2026-10-27T14:52:02.808Z"
+    },
+    {
+      "id": "res_concurrent_7",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_7",
+      "reservationNumber": "RES-CONC-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.809Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_7",
+          "reservationId": "res_concurrent_7",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.809Z",
+      "updatedAt": "2026-10-27T14:52:02.809Z"
+    },
+    {
+      "id": "res_concurrent_8",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_8",
+      "reservationNumber": "RES-CONC-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.809Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_8",
+          "reservationId": "res_concurrent_8",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.809Z",
+      "updatedAt": "2026-10-27T14:52:02.809Z"
+    },
+    {
+      "id": "res_concurrent_9",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_9",
+      "reservationNumber": "RES-CONC-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.809Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_9",
+          "reservationId": "res_concurrent_9",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.809Z",
+      "updatedAt": "2026-10-27T14:52:02.809Z"
+    },
+    {
+      "id": "res_concurrent_10",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_concurrent_10",
+      "reservationNumber": "RES-CONC-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.810Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_conc_10",
+          "reservationId": "res_concurrent_10",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.810Z",
+      "updatedAt": "2026-10-27T14:52:02.810Z"
+    },
+    {
+      "id": "res_test_expired_1",
+      "eventId": "evt_concurrency_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-001",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:51:57.811Z",
+      "totalAmount": 500,
+      "items": [
+        {
+          "id": "item_exp_1",
+          "reservationId": "res_test_expired_1",
+          "ticketCategoryId": "tkt_concurrency_test_10",
+          "quantity": 5,
+          "unitPrice": 100,
+          "subtotal": 500
+        }
+      ],
+      "createdAt": "2026-10-27T14:41:57.811Z",
+      "updatedAt": "2026-10-27T14:52:02.811Z"
+    },
+    {
+      "id": "res_fail_test_1793112722814",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-TEST",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:02.814Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1",
+          "reservationId": "res_fail_test_1793112722814",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:02.814Z",
+      "updatedAt": "2026-10-27T14:52:02.814Z"
+    },
+    {
+      "id": "res_conc_1",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_1",
+      "reservationNumber": "RES-C-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.535Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_1",
+          "reservationId": "res_conc_1",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.535Z",
+      "updatedAt": "2026-10-27T14:52:46.535Z"
+    },
+    {
+      "id": "res_conc_2",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_2",
+      "reservationNumber": "RES-C-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.536Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_2",
+          "reservationId": "res_conc_2",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.536Z",
+      "updatedAt": "2026-10-27T14:52:46.536Z"
+    },
+    {
+      "id": "res_conc_3",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_3",
+      "reservationNumber": "RES-C-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.536Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_3",
+          "reservationId": "res_conc_3",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.536Z",
+      "updatedAt": "2026-10-27T14:52:46.536Z"
+    },
+    {
+      "id": "res_conc_4",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_4",
+      "reservationNumber": "RES-C-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.536Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_4",
+          "reservationId": "res_conc_4",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.536Z",
+      "updatedAt": "2026-10-27T14:52:46.536Z"
+    },
+    {
+      "id": "res_conc_5",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_5",
+      "reservationNumber": "RES-C-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.537Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_5",
+          "reservationId": "res_conc_5",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.537Z",
+      "updatedAt": "2026-10-27T14:52:46.537Z"
+    },
+    {
+      "id": "res_conc_6",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_6",
+      "reservationNumber": "RES-C-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.537Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_6",
+          "reservationId": "res_conc_6",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.537Z",
+      "updatedAt": "2026-10-27T14:52:46.537Z"
+    },
+    {
+      "id": "res_conc_7",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_7",
+      "reservationNumber": "RES-C-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.539Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_7",
+          "reservationId": "res_conc_7",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.539Z",
+      "updatedAt": "2026-10-27T14:52:46.539Z"
+    },
+    {
+      "id": "res_conc_8",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_8",
+      "reservationNumber": "RES-C-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.539Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_8",
+          "reservationId": "res_conc_8",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.539Z",
+      "updatedAt": "2026-10-27T14:52:46.539Z"
+    },
+    {
+      "id": "res_conc_9",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_9",
+      "reservationNumber": "RES-C-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.539Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_9",
+          "reservationId": "res_conc_9",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.539Z",
+      "updatedAt": "2026-10-27T14:52:46.539Z"
+    },
+    {
+      "id": "res_conc_10",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_10",
+      "reservationNumber": "RES-C-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.540Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_10",
+          "reservationId": "res_conc_10",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.540Z",
+      "updatedAt": "2026-10-27T14:52:46.540Z"
+    },
+    {
+      "id": "res_test_exp_99",
+      "eventId": "evt_conc_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-99",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:52:45.542Z",
+      "totalAmount": 300,
+      "items": [
+        {
+          "id": "item_exp_99",
+          "reservationId": "res_test_exp_99",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 3,
+          "unitPrice": 100,
+          "subtotal": 300
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.542Z",
+      "updatedAt": "2026-10-27T14:52:46.543Z"
+    },
+    {
+      "id": "res_fail_1793112766544",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-1793112766544",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:02:46.544Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1793112766544",
+          "reservationId": "res_fail_1793112766544",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:52:46.544Z",
+      "updatedAt": "2026-10-27T14:52:46.544Z"
+    },
+    {
+      "id": "res_conc_1",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_1",
+      "reservationNumber": "RES-C-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.435Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_1",
+          "reservationId": "res_conc_1",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.435Z",
+      "updatedAt": "2026-10-27T14:53:00.435Z"
+    },
+    {
+      "id": "res_conc_2",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_2",
+      "reservationNumber": "RES-C-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.436Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_2",
+          "reservationId": "res_conc_2",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.436Z",
+      "updatedAt": "2026-10-27T14:53:00.436Z"
+    },
+    {
+      "id": "res_conc_3",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_3",
+      "reservationNumber": "RES-C-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.436Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_3",
+          "reservationId": "res_conc_3",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.436Z",
+      "updatedAt": "2026-10-27T14:53:00.436Z"
+    },
+    {
+      "id": "res_conc_4",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_4",
+      "reservationNumber": "RES-C-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.437Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_4",
+          "reservationId": "res_conc_4",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.437Z",
+      "updatedAt": "2026-10-27T14:53:00.437Z"
+    },
+    {
+      "id": "res_conc_5",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_5",
+      "reservationNumber": "RES-C-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.437Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_5",
+          "reservationId": "res_conc_5",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.437Z",
+      "updatedAt": "2026-10-27T14:53:00.437Z"
+    },
+    {
+      "id": "res_conc_6",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_6",
+      "reservationNumber": "RES-C-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.437Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_6",
+          "reservationId": "res_conc_6",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.437Z",
+      "updatedAt": "2026-10-27T14:53:00.437Z"
+    },
+    {
+      "id": "res_conc_7",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_7",
+      "reservationNumber": "RES-C-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.438Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_7",
+          "reservationId": "res_conc_7",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.438Z",
+      "updatedAt": "2026-10-27T14:53:00.438Z"
+    },
+    {
+      "id": "res_conc_8",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_8",
+      "reservationNumber": "RES-C-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.438Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_8",
+          "reservationId": "res_conc_8",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.438Z",
+      "updatedAt": "2026-10-27T14:53:00.438Z"
+    },
+    {
+      "id": "res_conc_9",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_9",
+      "reservationNumber": "RES-C-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.439Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_9",
+          "reservationId": "res_conc_9",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.439Z",
+      "updatedAt": "2026-10-27T14:53:00.439Z"
+    },
+    {
+      "id": "res_conc_10",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_10",
+      "reservationNumber": "RES-C-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.439Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_10",
+          "reservationId": "res_conc_10",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.439Z",
+      "updatedAt": "2026-10-27T14:53:00.439Z"
+    },
+    {
+      "id": "res_test_exp_99",
+      "eventId": "evt_conc_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-99",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:52:59.440Z",
+      "totalAmount": 300,
+      "items": [
+        {
+          "id": "item_exp_99",
+          "reservationId": "res_test_exp_99",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 3,
+          "unitPrice": 100,
+          "subtotal": 300
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.440Z",
+      "updatedAt": "2026-10-27T14:53:00.442Z"
+    },
+    {
+      "id": "res_fail_1793112780444",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-1793112780444",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:03:00.444Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1793112780444",
+          "reservationId": "res_fail_1793112780444",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:53:00.444Z",
+      "updatedAt": "2026-10-27T14:53:00.444Z"
+    },
+    {
+      "id": "res_conc_1",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_1",
+      "reservationNumber": "RES-C-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.763Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_1",
+          "reservationId": "res_conc_1",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.763Z",
+      "updatedAt": "2026-10-27T14:54:05.763Z"
+    },
+    {
+      "id": "res_conc_2",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_2",
+      "reservationNumber": "RES-C-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.763Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_2",
+          "reservationId": "res_conc_2",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.763Z",
+      "updatedAt": "2026-10-27T14:54:05.763Z"
+    },
+    {
+      "id": "res_conc_3",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_3",
+      "reservationNumber": "RES-C-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.763Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_3",
+          "reservationId": "res_conc_3",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.763Z",
+      "updatedAt": "2026-10-27T14:54:05.763Z"
+    },
+    {
+      "id": "res_conc_4",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_4",
+      "reservationNumber": "RES-C-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.764Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_4",
+          "reservationId": "res_conc_4",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.764Z",
+      "updatedAt": "2026-10-27T14:54:05.764Z"
+    },
+    {
+      "id": "res_conc_5",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_5",
+      "reservationNumber": "RES-C-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.764Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_5",
+          "reservationId": "res_conc_5",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.764Z",
+      "updatedAt": "2026-10-27T14:54:05.764Z"
+    },
+    {
+      "id": "res_conc_6",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_6",
+      "reservationNumber": "RES-C-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.764Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_6",
+          "reservationId": "res_conc_6",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.764Z",
+      "updatedAt": "2026-10-27T14:54:05.764Z"
+    },
+    {
+      "id": "res_conc_7",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_7",
+      "reservationNumber": "RES-C-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.765Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_7",
+          "reservationId": "res_conc_7",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.765Z",
+      "updatedAt": "2026-10-27T14:54:05.765Z"
+    },
+    {
+      "id": "res_conc_8",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_8",
+      "reservationNumber": "RES-C-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.765Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_8",
+          "reservationId": "res_conc_8",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.765Z",
+      "updatedAt": "2026-10-27T14:54:05.765Z"
+    },
+    {
+      "id": "res_conc_9",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_9",
+      "reservationNumber": "RES-C-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.765Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_9",
+          "reservationId": "res_conc_9",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.765Z",
+      "updatedAt": "2026-10-27T14:54:05.765Z"
+    },
+    {
+      "id": "res_conc_10",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_10",
+      "reservationNumber": "RES-C-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.766Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_10",
+          "reservationId": "res_conc_10",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.766Z",
+      "updatedAt": "2026-10-27T14:54:05.766Z"
+    },
+    {
+      "id": "res_test_exp_99",
+      "eventId": "evt_conc_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-99",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:54:04.767Z",
+      "totalAmount": 300,
+      "items": [
+        {
+          "id": "item_exp_99",
+          "reservationId": "res_test_exp_99",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 3,
+          "unitPrice": 100,
+          "subtotal": 300
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.767Z",
+      "updatedAt": "2026-10-27T14:54:05.767Z"
+    },
+    {
+      "id": "res_fail_1793112845768",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-1793112845769",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.769Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1793112845769",
+          "reservationId": "res_fail_1793112845768",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.769Z",
+      "updatedAt": "2026-10-27T14:54:05.769Z"
+    },
+    {
+      "id": "res_idem_1793112845771",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-IDEM-1793112845771",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:05.771Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_idem_1793112845771",
+          "reservationId": "res_idem_1793112845771",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:05.771Z",
+      "updatedAt": "2026-10-27T14:54:05.771Z"
+    },
+    {
+      "id": "res_conc_1",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_1",
+      "reservationNumber": "RES-C-1",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.483Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_1",
+          "reservationId": "res_conc_1",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.483Z",
+      "updatedAt": "2026-10-27T14:54:28.483Z"
+    },
+    {
+      "id": "res_conc_2",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_2",
+      "reservationNumber": "RES-C-2",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.487Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_2",
+          "reservationId": "res_conc_2",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.487Z",
+      "updatedAt": "2026-10-27T14:54:28.487Z"
+    },
+    {
+      "id": "res_conc_3",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_3",
+      "reservationNumber": "RES-C-3",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.489Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_3",
+          "reservationId": "res_conc_3",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.489Z",
+      "updatedAt": "2026-10-27T14:54:28.489Z"
+    },
+    {
+      "id": "res_conc_4",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_4",
+      "reservationNumber": "RES-C-4",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.490Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_4",
+          "reservationId": "res_conc_4",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.490Z",
+      "updatedAt": "2026-10-27T14:54:28.490Z"
+    },
+    {
+      "id": "res_conc_5",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_5",
+      "reservationNumber": "RES-C-5",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.491Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_5",
+          "reservationId": "res_conc_5",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.491Z",
+      "updatedAt": "2026-10-27T14:54:28.491Z"
+    },
+    {
+      "id": "res_conc_6",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_6",
+      "reservationNumber": "RES-C-6",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.493Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_6",
+          "reservationId": "res_conc_6",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.493Z",
+      "updatedAt": "2026-10-27T14:54:28.493Z"
+    },
+    {
+      "id": "res_conc_7",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_7",
+      "reservationNumber": "RES-C-7",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.495Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_7",
+          "reservationId": "res_conc_7",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.495Z",
+      "updatedAt": "2026-10-27T14:54:28.495Z"
+    },
+    {
+      "id": "res_conc_8",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_8",
+      "reservationNumber": "RES-C-8",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.496Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_8",
+          "reservationId": "res_conc_8",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.496Z",
+      "updatedAt": "2026-10-27T14:54:28.496Z"
+    },
+    {
+      "id": "res_conc_9",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_9",
+      "reservationNumber": "RES-C-9",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.497Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_9",
+          "reservationId": "res_conc_9",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.497Z",
+      "updatedAt": "2026-10-27T14:54:28.497Z"
+    },
+    {
+      "id": "res_conc_10",
+      "eventId": "evt_conc_test",
+      "userId": "usr_conc_10",
+      "reservationNumber": "RES-C-10",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.499Z",
+      "totalAmount": 100,
+      "items": [
+        {
+          "id": "item_c_10",
+          "reservationId": "res_conc_10",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 1,
+          "unitPrice": 100,
+          "subtotal": 100
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.499Z",
+      "updatedAt": "2026-10-27T14:54:28.499Z"
+    },
+    {
+      "id": "res_test_exp_99",
+      "eventId": "evt_conc_test",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-EXP-99",
+      "status": "EXPIRED",
+      "expiresAt": "2026-10-27T14:54:27.502Z",
+      "totalAmount": 300,
+      "items": [
+        {
+          "id": "item_exp_99",
+          "reservationId": "res_test_exp_99",
+          "ticketCategoryId": "tkt_conc_test_10",
+          "quantity": 3,
+          "unitPrice": 100,
+          "subtotal": 300
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.502Z",
+      "updatedAt": "2026-10-27T14:54:28.504Z"
+    },
+    {
+      "id": "res_fail_1793112868507",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-FAIL-1793112868507",
+      "status": "PENDING",
+      "expiresAt": "2026-10-27T15:04:28.507Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_fail_1793112868507",
+          "reservationId": "res_fail_1793112868507",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.507Z",
+      "updatedAt": "2026-10-27T14:54:28.507Z"
+    },
+    {
+      "id": "res_idem_1793112868513",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "reservationNumber": "RES-IDEM-1793112868513",
+      "status": "CONFIRMED",
+      "expiresAt": "2026-10-27T15:04:28.513Z",
+      "totalAmount": 600,
+      "items": [
+        {
+          "id": "item_idem_1793112868513",
+          "reservationId": "res_idem_1793112868513",
+          "ticketCategoryId": "tkt_dev_std",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600
+        }
+      ],
+      "createdAt": "2026-10-27T14:54:28.513Z",
+      "updatedAt": "2026-10-27T14:54:28.516Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_sample_101",
+      "reservationId": "res_sample_101",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "orderNumber": "TN-2026-94812",
+      "totalAmount": 3000,
+      "currency": "INR",
+      "status": "PAID",
+      "createdAt": "2026-10-25T14:51:31.593Z",
+      "updatedAt": "2026-10-25T14:51:31.593Z",
+      "items": [
+        {
+          "id": "ord_item_1",
+          "orderId": "ord_sample_101",
+          "ticketCategoryId": "tkt_dev_plat",
+          "categoryName": "Platinum Pass",
+          "quantity": 1,
+          "unitPrice": 3000,
+          "subtotal": 3000,
+          "attendeeName": "Aarav Patel",
+          "attendeeEmail": "attendee@example.com",
+          "qrCode": "TN-PASS-94812-PLT-1"
+        }
+      ]
+    },
+    {
+      "id": "ord_1793112868516_mvbh0",
+      "reservationId": "res_idem_1793112868513",
+      "eventId": "evt_tech_conf_1",
+      "userId": "usr_att_1",
+      "orderNumber": "TN-2026-32215",
+      "totalAmount": 600,
+      "currency": "INR",
+      "status": "PAID",
+      "createdAt": "2026-10-27T14:54:28.516Z",
+      "updatedAt": "2026-10-27T14:54:28.516Z",
+      "items": [
+        {
+          "id": "item_ord_1793112868516_mvbh0_1",
+          "orderId": "ord_1793112868516_mvbh0",
+          "ticketCategoryId": "tkt_dev_std",
+          "categoryName": "Standard Pass",
+          "quantity": 1,
+          "unitPrice": 600,
+          "subtotal": 600,
+          "attendeeName": "Valued Attendee",
+          "attendeeEmail": "attendee@example.com",
+          "qrCode": "TN-TKT-TN-2026-32215-1-TC6P"
+        }
+      ]
+    }
+  ],
+  "paymentTransactions": [
+    {
+      "id": "pay_sample_101",
+      "orderId": "ord_sample_101",
+      "reservationId": "res_sample_101",
+      "providerReference": "SIM-PAY-94812-TXN",
+      "amount": 3000,
+      "currency": "INR",
+      "status": "SUCCESS",
+      "providerResponse": "{\"message\":\"Simulated payment authorized\",\"cardType\":\"VISA\"}",
+      "createdAt": "2026-10-25T14:51:31.593Z",
+      "updatedAt": "2026-10-25T14:51:31.593Z"
+    },
+    {
+      "id": "pay_1793112845769_wbxzj",
+      "reservationId": "res_fail_1793112845768",
+      "providerReference": "SIM-TXN-MVQT3AO9-6477",
+      "amount": 600,
+      "currency": "INR",
+      "status": "FAILED",
+      "providerResponse": "{\"error\":\"SIMULATED_DECLINE\",\"message\":\"Simulated issuer bank rejection: Insufficient test funds or customer declined.\"}",
+      "createdAt": "2026-10-27T14:54:05.769Z",
+      "updatedAt": "2026-10-27T14:54:05.770Z"
+    },
+    {
+      "id": "pay_1793112845772_3o0dt",
+      "reservationId": "res_idem_1793112845771",
+      "providerReference": "SIM-TXN-MVQT3AOC-8906",
+      "amount": 600,
+      "currency": "INR",
+      "status": "INITIATED",
+      "providerResponse": "{\"gateway\":\"TicketNest Simulated Gateway v2.4\",\"method\":\"UPI/Card\",\"initiatedAt\":\"2026-10-27T14:54:05.772Z\"}",
+      "createdAt": "2026-10-27T14:54:05.772Z",
+      "updatedAt": "2026-10-27T14:54:05.772Z"
+    },
+    {
+      "id": "pay_1793112868510_mpvx1",
+      "reservationId": "res_fail_1793112868507",
+      "providerReference": "SIM-TXN-MVQT3S7Y-5078",
+      "amount": 600,
+      "currency": "INR",
+      "status": "FAILED",
+      "providerResponse": "{\"error\":\"SIMULATED_DECLINE\",\"message\":\"Simulated issuer bank rejection: Insufficient test funds or customer declined.\"}",
+      "createdAt": "2026-10-27T14:54:28.510Z",
+      "updatedAt": "2026-10-27T14:54:28.512Z"
+    },
+    {
+      "id": "pay_1793112868515_6dlxk",
+      "reservationId": "res_idem_1793112868513",
+      "providerReference": "SIM-TXN-MVQT3S83-8166",
+      "amount": 600,
+      "currency": "INR",
+      "status": "SUCCESS",
+      "providerResponse": "{\"status\":\"CAPTURED\",\"authCode\":\"AUTH-T2FSD2\",\"network\":\"RUPAY_SIMULATOR\",\"settledAt\":\"2026-10-27T14:54:28.516Z\"}",
+      "createdAt": "2026-10-27T14:54:28.515Z",
+      "updatedAt": "2026-10-27T14:54:28.516Z",
+      "orderId": "ord_1793112868516_mvbh0"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1793112868516_0yuq",
+      "userId": "usr_att_1",
+      "title": "Booking Confirmed!",
+      "message": "Order #TN-2026-32215 for ₹600 has been confirmed. Your ticket pass is ready.",
+      "read": false,
+      "createdAt": "2026-10-27T14:54:28.516Z"
+    },
+    {
+      "id": "notif_1793112868504_dhzt",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-99 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:54:28.504Z"
+    },
+    {
+      "id": "notif_1793112845767_fpk6",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-99 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:54:05.767Z"
+    },
+    {
+      "id": "notif_1793112780442_rn11",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-99 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:53:00.442Z"
+    },
+    {
+      "id": "notif_1793112766543_movz",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-99 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:52:46.543Z"
+    },
+    {
+      "id": "notif_1793112722812_56xf",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-001 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:52:02.812Z"
+    },
+    {
+      "id": "notif_1793112703545_lc2g",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-001 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:51:43.545Z"
+    },
+    {
+      "id": "notif_1793112691601_9owm",
+      "userId": "usr_att_1",
+      "title": "Ticket Reservation Expired",
+      "message": "Your 10-minute hold for reservation RES-EXP-001 has expired and the tickets have been returned to inventory.",
+      "read": false,
+      "createdAt": "2026-10-27T14:51:31.601Z"
+    },
+    {
+      "id": "notif_1",
+      "userId": "usr_att_1",
+      "title": "Booking Confirmed!",
+      "message": "Your Platinum Pass for DevPulse India Tech Summit 2026 has been successfully confirmed. QR Pass is ready in your dashboard.",
+      "read": false,
+      "createdAt": "2026-10-25T14:51:31.593Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_1793112868516_xyige",
+      "userId": "usr_att_1",
+      "action": "ORDER_CONFIRMED",
+      "entityType": "ORDER",
+      "entityId": "ord_1793112868516_mvbh0",
+      "details": "Order #TN-2026-32215 confirmed with payment ref SIM-TXN-MVQT3S83-8166",
+      "createdAt": "2026-10-27T14:54:28.516Z"
+    },
+    {
+      "id": "audit_1793112868515_r7yr2",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_INITIATED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112868515_6dlxk",
+      "details": "Payment initiated for reservation RES-IDEM-1793112868513 (Amount: ₹600)",
+      "createdAt": "2026-10-27T14:54:28.515Z"
+    },
+    {
+      "id": "audit_1793112868512_tsy2x",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_REJECTED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112868510_mpvx1",
+      "details": "Payment SIM-TXN-MVQT3S7Y-5078 was rejected by simulation",
+      "createdAt": "2026-10-27T14:54:28.512Z"
+    },
+    {
+      "id": "audit_1793112868510_b1ap9",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_INITIATED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112868510_mpvx1",
+      "details": "Payment initiated for reservation RES-FAIL-1793112868507 (Amount: ₹600)",
+      "createdAt": "2026-10-27T14:54:28.510Z"
+    },
+    {
+      "id": "audit_1793112868505_dz34u",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:54:28.505Z"
+    },
+    {
+      "id": "audit_1793112845772_u9gn4",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_INITIATED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112845772_3o0dt",
+      "details": "Payment initiated for reservation RES-IDEM-1793112845771 (Amount: ₹600)",
+      "createdAt": "2026-10-27T14:54:05.772Z"
+    },
+    {
+      "id": "audit_1793112845770_jsyb3",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_REJECTED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112845769_wbxzj",
+      "details": "Payment SIM-TXN-MVQT3AO9-6477 was rejected by simulation",
+      "createdAt": "2026-10-27T14:54:05.770Z"
+    },
+    {
+      "id": "audit_1793112845769_u5sig",
+      "userId": "usr_att_1",
+      "action": "PAYMENT_INITIATED",
+      "entityType": "PAYMENT",
+      "entityId": "pay_1793112845769_wbxzj",
+      "details": "Payment initiated for reservation RES-FAIL-1793112845769 (Amount: ₹600)",
+      "createdAt": "2026-10-27T14:54:05.769Z"
+    },
+    {
+      "id": "audit_1793112845768_fftme",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:54:05.768Z"
+    },
+    {
+      "id": "audit_1793112780443_dkul8",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:53:00.443Z"
+    },
+    {
+      "id": "audit_1793112766544_6w3j4",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:52:46.544Z"
+    },
+    {
+      "id": "audit_1793112722812_p6xof",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:52:02.812Z"
+    },
+    {
+      "id": "audit_1793112703545_k1ksj",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:51:43.545Z"
+    },
+    {
+      "id": "audit_1793112691601_1j2se",
+      "userEmail": "system_worker@ticketnest.io",
+      "action": "RESERVATIONS_EXPIRED_CLEANUP",
+      "entityType": "RESERVATION",
+      "entityId": "batch",
+      "details": "Automated worker released inventory for 1 expired reservations.",
+      "createdAt": "2026-10-27T14:51:31.601Z"
+    },
+    {
+      "id": "audit_1",
+      "userId": "usr_admin_1",
+      "userEmail": "admin@ticketnest.io",
+      "action": "PLATFORM_INITIALIZED",
+      "entityType": "PLATFORM",
+      "entityId": "ticketnest_core",
+      "details": "Initial system seed bootstrap with default multi-tenant organizations and seed events.",
+      "createdAt": "2026-10-13T14:51:31.593Z"
+    }
+  ]
+}

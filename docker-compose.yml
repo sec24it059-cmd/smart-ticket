@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # TicketNest Application (Node.js & Express & React Vite)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ticketnest-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=postgresql://ticketnest_user:ticketnest_secure_pass@postgres:5432/ticketnest_db?schema=public
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=ticketnest-production-ready-jwt-secret-key-32chars
+      - RESERVATION_EXPIRY_MINUTES=10
+      - APP_URL=http://localhost:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  # PostgreSQL Relational Database (Prisma ORM)
+  postgres:
+    image: postgres:16-alpine
+    container_name: ticketnest-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ticketnest_user
+      POSTGRES_PASSWORD: ticketnest_secure_pass
+      POSTGRES_DB: ticketnest_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ticketnest_user -d ticketnest_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis for High-Speed Caching and BullMQ Job Scheduling
+  redis:
+    image: redis:7-alpine
+    container_name: ticketnest-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  postgres_data:
+  redis_data:

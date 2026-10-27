@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "TicketNest API Collection",
+    "description": "Comprehensive REST API test collection for TicketNest event booking and ticketing engine.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Attendee\",\n  \"email\": \"test@ticketnest.io\",\n  \"password\": \"password123\",\n  \"role\": \"ATTENDEE\"\n}"
+            },
+            "url": "http://localhost:3000/api/auth/register"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"attendee@example.com\",\n  \"password\": \"attendee123\"\n}"
+            },
+            "url": "http://localhost:3000/api/auth/login"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Events & Reservations",
+      "item": [
+        {
+          "name": "Get Events",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:3000/api/events"
+          }
+        },
+        {
+          "name": "Create Reservation (10 min hold)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventId\": \"evt_tech_conf_1\",\n  \"items\": [{ \"ticketCategoryId\": \"tkt_dev_std\", \"quantity\": 2 }]\n}"
+            },
+            "url": "http://localhost:3000/api/reservations"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Payments & Orders",
+      "item": [
+        {
+          "name": "Initiate Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reservationId\": \"{{reservationId}}\"\n}"
+            },
+            "url": "http://localhost:3000/api/payments/initiate"
+          }
+        },
+        {
+          "name": "Simulate Approval",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transactionId\": \"{{transactionId}}\",\n  \"action\": \"APPROVE\"\n}"
+            },
+            "url": "http://localhost:3000/api/payments/simulate-action"
+          }
+        }
+      ]
+    }
+  ]
+}

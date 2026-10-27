@@ -1,0 +1,293 @@
+// TicketNest Prisma Schema
+// Database: PostgreSQL with Prisma ORM
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  ORGANIZER
+  ATTENDEE
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  INACTIVE
+}
+
+enum OrgRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+enum EventStatus {
+  DRAFT
+  PUBLISHED
+  CANCELLED
+  SUSPENDED
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  EXPIRED
+  CANCELLED
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  INITIATED
+  SUCCESS
+  FAILED
+  TIMED_OUT
+}
+
+model User {
+  id           String      @id @default(uuid())
+  email        String      @unique
+  passwordHash String
+  name         String
+  role         Role        @default(ATTENDEE)
+  status       UserStatus  @default(ACTIVE)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  // Relationships
+  organizationMembers OrganizationMember[]
+  reservations        Reservation[]
+  orders              Orders[]
+  notifications       Notification[]
+  auditLogs           AuditLog[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Organization {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  description String?
+  logoUrl     String?
+  verified    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relationships
+  members OrganizationMember[]
+  events  Event[]
+
+  @@index([slug])
+}
+
+model OrganizationMember {
+  id             String       @id @default(uuid())
+  organizationId String
+  userId         String
+  role           OrgRole      @default(MEMBER)
+  createdAt      DateTime     @default(now())
+
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, userId])
+  @@index([organizationId])
+  @@index([userId])
+}
+
+model Event {
+  id              String      @id @default(uuid())
+  organizationId  String
+  title           String
+  slug            String      @unique
+  description     String
+  coverImage      String
+  category        String
+  venueName       String
+  venueAddress    String
+  city            String
+  startDate       DateTime
+  endDate         DateTime
+  bookingOpensAt  DateTime
+  salesClosesAt   DateTime
+  maxCapacity     Int
+  status          EventStatus @default(DRAFT)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  organization    Organization     @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  ticketCategories TicketCategory[]
+  reservations    Reservation[]
+  orders          Orders[]
+
+  @@index([organizationId])
+  @@index([category])
+  @@index([startDate])
+  @@index([status])
+  @@index([city])
+}
+
+model TicketCategory {
+  id               String   @id @default(uuid())
+  eventId          String
+  name             String
+  description      String?
+  price            Float
+  totalQuantity    Int
+  reservedQuantity Int      @default(0)
+  soldQuantity     Int      @default(0)
+  maxPerUser       Int      @default(5)
+  salesClosesAt    DateTime?
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  event            Event             @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  reservationItems ReservationItem[]
+  orderItems       OrderItem[]
+
+  @@index([eventId])
+  @@index([isActive])
+}
+
+model Reservation {
+  id                String            @id @default(uuid())
+  eventId           String
+  userId            String
+  reservationNumber String            @unique
+  status            ReservationStatus @default(PENDING)
+  expiresAt         DateTime
+  totalAmount       Float
+  idempotencyKey    String?           @unique
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  event             Event             @relation(fields: [eventId], references: [id])
+  user              User              @relation(fields: [userId], references: [id])
+  items             ReservationItem[]
+  order             Orders?
+  transactions      PaymentTransaction[]
+
+  @@index([eventId])
+  @@index([userId])
+  @@index([status, expiresAt])
+}
+
+model ReservationItem {
+  id               String         @id @default(uuid())
+  reservationId    String
+  ticketCategoryId String
+  quantity         Int
+  unitPrice        Float
+  subtotal         Float
+
+  reservation      Reservation    @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  ticketCategory   TicketCategory @relation(fields: [ticketCategoryId], references: [id])
+
+  @@index([reservationId])
+  @@index([ticketCategoryId])
+}
+
+model Orders {
+  id                String      @id @default(uuid())
+  reservationId     String      @unique
+  eventId           String
+  userId            String
+  orderNumber       String      @unique
+  totalAmount       Float
+  currency          String      @default("INR")
+  status            OrderStatus @default(PENDING)
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+
+  reservation       Reservation          @relation(fields: [reservationId], references: [id])
+  event             Event                @relation(fields: [eventId], references: [id])
+  user              User                 @relation(fields: [userId], references: [id])
+  items             OrderItem[]
+  paymentTransactions PaymentTransaction[]
+
+  @@index([userId])
+  @@index([eventId])
+  @@index([orderNumber])
+}
+
+model OrderItem {
+  id               String         @id @default(uuid())
+  orderId          String
+  ticketCategoryId String
+  quantity         Int
+  unitPrice        Float
+  subtotal         Float
+  attendeeName     String
+  attendeeEmail    String
+  qrCode           String
+
+  order            Orders         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  ticketCategory   TicketCategory @relation(fields: [ticketCategoryId], references: [id])
+
+  @@index([orderId])
+}
+
+model PaymentTransaction {
+  id                String        @id @default(uuid())
+  orderId           String?
+  reservationId     String
+  providerReference String        @unique
+  amount            Float
+  currency          String        @default("INR")
+  status            PaymentStatus @default(INITIATED)
+  providerResponse  String?
+  idempotencyKey    String?       @unique
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  order             Orders?       @relation(fields: [orderId], references: [id])
+  reservation       Reservation   @relation(fields: [reservationId], references: [id])
+
+  @@index([orderId])
+  @@index([reservationId])
+  @@index([providerReference])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  userId     String?
+  action     String
+  entityType String
+  entityId   String
+  details    String?
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+
+  user       User?    @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([entityType, entityId])
+}

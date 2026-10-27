@@ -1,0 +1,6 @@
+{
+  "name": "TicketNest - Smart Event Booking & Management Platform",
+  "description": "Multi-tenant event ticketing and management platform featuring concurrency-safe reservations, simulated payments, background expiration workers, organizer analytics, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
